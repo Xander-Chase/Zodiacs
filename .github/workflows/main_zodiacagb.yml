@@ -19,16 +19,16 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Release ./Zodiacs.csproj  # Reference your project file here
 
       - name: Publish with dotnet
-        run: dotnet publish -c Release -o ./publish  # Publish to a local "publish" directory
+        run: dotnet publish -c Release -o ./publish ./Zodiacs.csproj  # Publish output to the "publish" directory
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ./publish  # Adjusted path to match the output directory
+          path: ./publish  # Path to the published output
 
   deploy:
     runs-on: windows-latest
@@ -37,7 +37,7 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write # This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
