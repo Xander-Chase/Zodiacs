@@ -1,0 +1,36 @@
+﻿@page
+@model Zodiacs.Pages.ZodiacModel
+@{
+    ViewData["Title"] = "Zodiacs Page";
+}
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Years" class="control-label"></label>
+            <input asp-for="Years" class="form-control" />
+        </div>
+        
+        <div class="form-group">
+            <br>
+            <input type="submit" value="Calculate" class="btn btn-primary" />
+            <a asp-page="/Zodiac" class="btn btn-success">Clear</a>
+        </div>
+
+        <!-- Show Zodiac Image if no error -->
+        @if (ViewData["ZodiacImage"] != null)
+        {
+            <div class="form-group">
+                <img src="@ViewData["ZodiacImage"]" alt="Zodiac Sign" style="max-width: 300px; max-height: 300px; " />
+            </div>
+        }
+
+        <!-- Show Error Message if present -->
+        @if (ViewData["YearError"] != null)
+        {
+            <div class="alert alert-danger" style="border: 1px solid red; padding: 10px; color: red;">
+                @ViewData["YearError"]
+            </div>
+        }
+    </form>
+</div>
