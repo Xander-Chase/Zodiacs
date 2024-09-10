@@ -22,7 +22,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish with dotnet
-        run: dotnet publish ./Zodiacs.csproj -c Release -o C:\COMP4952Workspace\Lab 1 Zodiac\Zodiacs
+        run: dotnet publish ./Zodiacs.csproj -c Release -o "./publish"      
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
