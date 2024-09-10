@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ajgab\\OneDrive\\School\\BCIT\\BCIT Term 4\\COMP4952-HCI\\Labs\\Lab 1 Zodiac\\Zodiacs\\Zodiacs.csproj",
+      "projectUniqueName": "C:\\COMP4952Workspace\\Lab 1 Zodiac\\Zodiacs\\Zodiacs.csproj",
       "projectName": "Zodiacs",
-      "projectPath": "C:\\Users\\Ajgab\\OneDrive\\School\\BCIT\\BCIT Term 4\\COMP4952-HCI\\Labs\\Lab 1 Zodiac\\Zodiacs\\Zodiacs.csproj",
+      "projectPath": "C:\\COMP4952Workspace\\Lab 1 Zodiac\\Zodiacs\\Zodiacs.csproj",
       "packagesPath": "C:\\Users\\Ajgab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ajgab\\OneDrive\\School\\BCIT\\BCIT Term 4\\COMP4952-HCI\\Labs\\Lab 1 Zodiac\\Zodiacs\\obj\\",
+      "outputPath": "C:\\COMP4952Workspace\\Lab 1 Zodiac\\Zodiacs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -22,13 +22,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o C:\Users\Ajgab\OneDrive\School\BCIT\BCIT Term 4\COMP4952-HCI\Labs\Lab 1 Zodiac\Zodiacs
+        run: dotnet publish -c Release -o C:\COMP4952Workspace\Lab 1 Zodiac\Zodiacs
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: C:\Users\Ajgab\OneDrive\School\BCIT\BCIT Term 4\COMP4952-HCI\Labs\Lab 1 Zodiac\Zodiacs
+          path: C:\COMP4952Workspace\Lab 1 Zodiac\Zodiacs
 
   deploy:
     runs-on: windows-latest
