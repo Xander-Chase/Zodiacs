@@ -18,11 +18,14 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      - name: Verify Zodiacs.csproj exists
+        run: ls -la ./Zodiacs.csproj
+
       - name: Build with dotnet
         run: dotnet build ./Zodiacs.csproj --configuration Release
 
       - name: Publish with dotnet
-        run: dotnet publish ./Zodiacs.csproj -c Release -o ./publish
+        run: dotnet publish Zodiacs.csproj -c Release -o ${{ github.workspace }}/publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
